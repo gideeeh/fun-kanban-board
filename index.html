@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>        
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("nav").on('click','#create-sticky',function(){
+                    $("main").append(`<div id="dialog">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>`);
+                    $( function() {
+                        $( "#dialog" ).dialog();
+                    } );
+                });
+                $("body").on('click','#create-task li',function(){
+                    let name = $(this).attr("id");
+                    let className = $(this).attr("class");
+                    let imgUrl = $(this).attr("dp");
+                    alert(`New task for ${name}!`);
+                    $("main #sortable1").append(`<li class="${className}"><img src="./images/${imgUrl}"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p></li>`);
+                });
+                $( function() {
+                    $("#sortable1,#sortable2,#sortable3,#sortable4").sortable({
+                        connectWith: "#sortable1, #sortable2,#sortable3,#sortable4",
+                        dropOnEmpty: true
+                    });
+                } );
+                $( function() {
+                    $( "#taskSettings" ).menu();
+                } );
+            });
+        </script>
+    </head>
+    <body>
+        <nav>
+            <h1>KanBan Board</h1>
+            <ul id="taskSettings" class="pop-menu">
+                <li><div>Options</div>
+                    <ul class="options">
+                        <li><div>Create New Task</div>
+                            <ul  id="create-task">
+                                <li id="Loid" class="loid" dp="loid.png">
+                                    <div>Loid</div>
+                                </li>
+                                <li id="Yor" class="yor" dp="yor.png">
+                                    <div>Yor</div>
+                                </li>
+                                <li id="Anya" class="anya" dp="anya.png">
+                                    <div>Anya</div>
+                                </li>
+                                <li id="Bond" class="bond" dp="bond.png">
+                                    <div>Bond</div>
+                                </li>
+                            </ul>
+                        <li>
+                            <div id="create-sticky"> Create Sticky Note</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <h1 class="to-do">TO-DO</h1><!--
+         --><h1 class="wip">WORK-IN-PROGRESS</h1><!--
+         --><h1 class="validate">VALIDATE</h1><!--
+         --><h1 class="complete">COMPLETE</h1>
+        </header>
+        <main>
+            <div class="to-do">
+                <ul id="sortable1"> 
+                </ul>
+            </div><!--
+            --><div class="wip">
+                <ul id="sortable2">
+
+                </ul>
+            </div><!--
+            --><div class="validate">
+                <ul id="sortable3">
+                </ul>
+            </div><!--
+            --><div class="complete">
+                <ul id="sortable4">
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Fira+Sans:wght@100;200;300;400;500;600;700;800&family=Gloria+Hallelujah&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;600;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Fira Sans, Arial, Helvetica, sans-serif;
+}
+body{
+    /* background-image: url(./images/bg.jpg); */
+    overflow: hidden;
+    position: fixed;
+}
+h1{
+    color: white;
+}
+nav{
+    font-size: 1em;
+    width: 100%;
+    background-color: black;
+    display: block;
+    height: 1.9vw;
+}
+nav ul{
+    display: inline-block;
+    height: 2vw;
+}
+nav div{
+    background-color: rgb(242,242,242); 
+}
+nav li{
+    height: 2vw;
+}
+nav textarea{
+    height: 100px;
+    width: 100px;
+}
+#taskSettings{
+    width: 10vw;
+}
+.ui-menu { 
+    width: 150px; 
+    background-color: ;
+}
+header{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 7.6vw;
+    border-bottom: 4px solid rgb(51,51,51);
+}
+header h1{
+    display: inline-block;
+    vertical-align: top;
+    color: rgb( 242,242,242);
+    font-size: 1.5vw;
+    padding-top: 3vw;
+    border: 2px solid rgb(51,51,51);
+    width: 25vw;
+    height: 100%;
+}
+header .to-do{
+    background-color: rgba(246,146,127,0.7);
+}
+header .wip{
+    background-color: rgba(163,112,177,0.7);
+}
+header .validate{
+    background-color: rgba(255, 205, 88, 0.7);
+}
+header .complete{
+    background-color: rgba(135,196,64,0.7);
+}
+main{
+    display: block;
+    width: 100%;
+    height: 85vh;
+}
+main div{
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    border: 1px solid rgba(51,51,51,0.3);
+    vertical-align: top;
+}
+ul{
+    width: 100%;
+    height: 100%;
+}
+main li{
+    display: block;
+    text-align: justify;
+    height: 13%;
+    width: 98%;
+    padding: 0.5vw 0.5vw 0.5vw;
+    margin: 0.2vw auto;
+    border-radius: 1vw;
+    border: 1px solid gray;
+}
+main li p{
+    position: relative;
+    text-align: left;
+    bottom: 5vw;
+    left: 2vw;
+    vertical-align: top;
+    display: inline-block;
+    padding: 2vw 2.2vw;
+}
+main img{
+    vertical-align: top;
+    display: inline-block;
+}
+.loid{
+    background-color:#8DA99B;   
+}
+.yor{
+    background-color:tomato;
+}
+.anya{
+    background-color:#FAB3AD;
+}
+.bond{
+    background-color: #F7F7CF;
+}
